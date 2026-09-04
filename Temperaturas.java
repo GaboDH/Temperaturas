@@ -4,7 +4,6 @@ public class Temperaturas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Acumuladores y contadores
         int cantidad = 0;
         double suma = 0;
         double mayor = 0;
@@ -22,14 +21,14 @@ public class Temperaturas {
         System.out.print("Temperatura: ");
         double temp = sc.nextDouble();
 
-        // Estructura requerida: while
+     
         while (temp != 999) {
-            
-            // Validacion de rango -50 a 60
+
+
             if (temp < -50 || temp > 60) {
                 System.out.println("Dato invalido! Solo se acepta entre -50 y 60. El 80 es invalido.");
             } else {
-                // Clasificacion con if-else
+
                 if (temp < 10) {
                     System.out.println(temp + " -> Frio");
                     frio++;
@@ -44,7 +43,7 @@ public class Temperaturas {
                     muyCalido++;
                 }
 
-                // Para mayor, menor, promedio
+        
                 suma += temp;
                 cantidad++;
 
@@ -62,7 +61,7 @@ public class Temperaturas {
             temp = sc.nextDouble();
         }
 
-        // Resultados finales
+
         System.out.println("\n--- RESULTADO FINAL ---");
         if (cantidad > 0) {
             double promedio = suma / cantidad;
