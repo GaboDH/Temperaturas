@@ -7,7 +7,7 @@ public class estacionamientoUni {
         double recaudacionTotal = 0;
         int totalVehiculos = 0;
 
-        // Estructura requerida: do-while para el menu
+
         do {
             System.out.println("\n=== ESTACIONAMIENTO UNIVERSITARIO ===");
             System.out.println("1. Calcular tarifa");
@@ -26,7 +26,7 @@ public class estacionamientoUni {
                     System.out.print("Seleccione: ");
                     int tipo = sc.nextInt();
 
-                    // Estructura requerida: switch
+        
                     double tarifaHora = 0;
                     String nombreVehiculo = "";
                     switch (tipo) {
@@ -39,7 +39,7 @@ public class estacionamientoUni {
                     System.out.print("Horas (1 a 24): ");
                     int horas = sc.nextInt();
 
-                    // Validacion 1 a 24 horas
+
                     if (horas < 1 || horas > 24) {
                         System.out.println("Error: 25 horas invalidas. Solo se permite 1 a 24.");
                         break;
@@ -54,17 +54,17 @@ public class estacionamientoUni {
                     double subtotal = tarifaHora * horas;
                     double descuento = 0;
 
-                    // Estructura requerida: if-else para descuentos
+        
                     if (rol == 1) {
-                        descuento = subtotal * 0.20; // 20% estudiante
+                        descuento = subtotal * 0.20; 
                     } else if (rol == 2) {
-                        descuento = subtotal * 0.10; // 10% docente
+                        descuento = subtotal * 0.10; 
                     }
 
                     double total = subtotal - descuento;
 
                     if (perdido == 1) {
-                        total += 5; // recargo $5
+                        total += 5; 
                     }
 
                     System.out.println("--- FACTURA ---");
